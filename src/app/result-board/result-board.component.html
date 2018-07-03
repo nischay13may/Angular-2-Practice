@@ -1,0 +1,18 @@
+
+<table *ngIf='resultData'>
+	<thead>Students Result Board</thead>
+	<tbody>
+		<tr>
+			<th>Student Name</th>
+			<th>Roll Number</th>
+			<th>Total Marks</th>
+			<th>Status</th>
+		</tr>
+		<tr *ngFor="let result of resultData">
+			<td>{{result.name}}</td> 
+			<td>{{result.rollNumber}}</td>
+			<td>{{result.marks.Maths+result.marks.English+result.marks.Science}}</td>
+			<td>{{result.status}}</td>
+		</tr>
+	</tbody>
+</table>
